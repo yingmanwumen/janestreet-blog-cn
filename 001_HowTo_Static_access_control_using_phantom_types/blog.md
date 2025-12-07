@@ -5,7 +5,7 @@
 
 ****
 
-我们认为 phantom types 是我们的第一篇正式文章的合适的主题，因为 phantom types 很好体现了 Ocaml 中一项强大而有用的 feature，尽管这个 feature 在实际中几乎不用。
+phantom types 作为我们第一篇正式博客的主题比较合适，因为 phantom types 很好体现了 Ocaml 中一项强大而有用的 feature，尽管这个 feature 在实际中几乎不用。
 
 本文将介绍一个 phantom types 相当简单的用法：在编译期实现的一种 capability 风格的访问控制模型（a capability-style access-control policy）。具体而言，我将描述如何给一个可变数据结构构造一个易用的、只读的接口。我们将用 `int ref` 的例子来探讨这一点。`int ref` 只是一个示例，但是相同的方法也适用于其它更实际的场景，例如字符串库或者数据库的接口等。
 
