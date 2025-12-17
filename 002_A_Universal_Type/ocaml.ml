@@ -6,12 +6,14 @@ end
 
 module Test (U : Univ) = struct
   let of_int, to_int = U.embed ()
+  let of_int2, to_int2 = U.embed ()
   let of_string, to_string = U.embed ()
   let r : U.t ref = ref (of_int 13)
 
   let () =
     assert (to_int !r = Some 13);
     assert (to_string !r = None);
+    assert (to_int2 !r = None);
     r := of_string "foo";
     assert (to_int !r = None);
     assert (to_string !r = Some "foo")
